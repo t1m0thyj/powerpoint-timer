@@ -24,7 +24,7 @@ namespace PowerPointTimer
             // Check activated slide for new timers
             Slide activatedSlide = Wn.View.Slide;
             _activeTimers = FindTimersOnSlide(activatedSlide)
-                .Select(timerShape => new TimerData(timerShape))
+                .Select(timerShape => new TimerData(timerShape, Wn.View.Next))
                 .ToList();
         }       
 
